@@ -18,7 +18,6 @@
             <a href="#home" class="active">Inicio</a>
             <a href="#projetos">Projetos</a>
             <a href="#habilidades">Habilidades</a>
-            <a href="#educacao">Educação</a> 
             <a href="#contato">Contato</a>
         </nav>
 
@@ -37,16 +36,16 @@
             <p>Apaixonado por criar experiências digitais incríveis.</p>
 
             <div class="social-icon">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jvoliveira1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/dev-jvoliveira" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/dev.jvoliveira/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
             <div class="container">
-                <a href="#" class="button">Contrarta-me</a>
+                <a href="https://wa.me/5519974273576?text=Ol%C3%A1%2C%20tudo%20bem%3F" target="_blank" class="button">Contrarta-me</a>
             </div>    
             <div class="container">
-                <a href="#" class="button">Fale comigo</a>
+                <a href="https://wa.me/5519974273576?text=Ol%C3%A1%2C%20tudo%20bem%3F" target="_blank" class="button">Fale comigo</a>
             </div>   
        </div> 
     </section>
@@ -57,10 +56,10 @@
         <div class="service-container">
             <div class="single-service">
                 <div class="content">
-                    <img src="images/completedwando.png" alt="Magdas" class="icon">
+                    <img src="images/completedwando.png" alt="wando" class="icon">
                     <h3 class="titulo">Wando's Lanches</h3>
-                    <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quas corrupti nemo? Fugit nulla porro nisi cupiditate cumque repudiandae perspiciatis aliquam quod provident corrupti quia, vel asperiores mollitia, officiis quibusdam.</p>
-                    <a href="#" class="saiba-mais">Saiba mais</a>
+                    <p class="descricao">Bem-vindo à Lanchonete Wando's lanches! Aqui, saboreie hambúrgueres suculentos e sanduíches especiais, preparados com ingredientes frescos. Nossa equipe amigável espera por você para uma experiência gastronômica memorável. Venha nos visitar hoje mesmo!</p>
+                    <a href="https://wandos-lanches.vercel.app/" class="saiba-mais" target="_blank">Saiba mais</a>
                 </div>
                 <span class="circle-before"></span>
             </div>
@@ -69,8 +68,8 @@
                 <div class="content">
                     <img src="images/completedmagda.png" alt="Magdas" class="icon">
                     <h3 class="titulo">Espaço Magda's</h3>
-                    <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quas corrupti nemo? Fugit nulla porro nisi cupiditate cumque repudiandae perspiciatis aliquam quod provident corrupti quia, vel asperiores mollitia, officiis quibusdam.</p>
-                    <a href="#" class="saiba-mais">Saiba mais</a>
+                    <p class="descricao">Bem-vindo ao Espaço Magda's, seu destino para relaxamento e beleza. Nossos terapeutas especializados oferecem massagens personalizadas para aliviar o estresse, enquanto nossos tratamentos estéticos revitalizam sua pele. Descubra o seu momento de serenidade conosco hoje mesmo!</p>
+                    <a href="https://dev-jvoliveira.github.io/EspacoMagdas/" class="saiba-mais">Saiba mais</a>
                 </div>
                 <span class="circle-before"></span>
             </div>
@@ -123,7 +122,35 @@
         
     </section>
 
-
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="heading">Fale comigo</h2>
+                    <h3> <i class="fa-regular fa-envelope"></i> -   oliveira.brustolin@gmail.com</h3>
+                    <h3><i class="fa-regular fa-envelope"></i>  -   jvoliveira160916@gmail.com</h3> 
+                    <h2>Me siga nas redes sociais</h2>
+                      
+                    <div class="social-icon">
+                        <a href="https://wa.me/5519974273576?text=Ol%C3%A1%2C%20tudo%20bem%3F" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/jvoliveira1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/dev.jvoliveira/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/dev-jvoliveira" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+                    </div>                
+                </div>
+                <div class="contact-right">
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder=" Seu nome" required>
+                        <input type="email" name="email" placeholder=" Seu e-mail" required>
+                        <textarea name="message" rows="6" placeholder=" Sua mensagem"></textarea>
+                        <div class="container">
+                            <button type="submit" class="button">Enviar</button>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script>
@@ -139,11 +166,21 @@
                 navbar.classList.remove('active');
             }
         });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+
+            const whatsappNumber = '5519974273576';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`)}`;
+
+            window.open(whatsappUrl, '_blank');
+        });
     </script>
     
-    
-
-
+    <script src="script.js"></script>
 
 </body>
 </html>

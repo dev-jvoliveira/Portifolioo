@@ -404,6 +404,25 @@ span {
     overflow: hidden;
 }
 
+.projetos .single-service .saiba-mais{
+    position: relative;
+    margin-top: 30px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    padding: 10px 10px;
+    overflow: hidden;
+}
+
+.projetos .single-service .saiba-mais:hover{
+    position: relative;
+    margin-top: 30px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 10px 10px;
+    overflow: hidden;
+    color: #fff;
+}
+
 .projetos .single-service .content {
     position: relative;
     z-index: 20;
@@ -466,18 +485,19 @@ span {
 
 .projetos .single-service .descricao {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 25px;
     transition: color .3s;
 }
 
 .projetos .single-service:hover .descricao {
-    color: #000;
+    color: #fff;
+    font-size: medium;
 }
 
 .projetos .single-service a {
     position: relative;
     font-size: 10px;
-    color: var(--main-color);
+    color: #000;
     text-decoration: none;
     font-weight: 500;
     transition: color .3s;
@@ -576,18 +596,122 @@ span {
     margin-left: 0.5rem;
 }
 
-/* Media Query para tablets */
 @media (max-width: 768px) {
     .habilidades .bar {
-        flex: 1 1 50%; /* Definindo a largura das barras para tablets */
-        max-width: 50%; /* Definindo a largura máxima das barras para tablets */
+        flex: 1 1 50%; 
+        max-width: 50%; 
     }
 }
 
-/* Media Query para dispositivos com largura menor que 480px */
+
 @media (max-width: 480px) {
     .habilidades .bar {
-        flex: 1 1 100%; /* Definindo a largura das barras para dispositivos com largura menor que 480px */
-        max-width: 100%; /* Definindo a largura máxima das barras para dispositivos com largura menor que 480px */
+        flex: 1 1 100%; 
+        max-width: 100%; 
+    }
+}
+
+
+.contact {
+    background: var(--bg-color);
+}
+
+.contact .container {
+    width: 70%;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+    background: var(--second-bg-color);
+}
+
+.contact .container .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact .contact-left .sub-title {
+    font-size: 2rem;
+}
+
+.contact .contact-left p {
+    margin-top: 30px;
+}
+
+.contact .contact-left p i {
+    color: var(--main-color);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact .contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--second-color);
+}
+
+
+@media (max-width: 768px) {
+    .contact .container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .contact .container .row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact .contact-left .sub-title {
+        font-size: 1.5rem;
+    }
+
+    form input, form textarea {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
 }
